@@ -5,13 +5,17 @@ const getTrackList = (song) => {
       href="#" class="card-title trackHover px-3" style="color: white;">${
         song.title
       }</a>
-    <small class="duration pr-3" style="color: white;">
-    ${
-      ("0" + Math.floor(song.duration / 60)).substr(-2) +
-      " : " +
-      ("0" + (song.duration % 60)).substr(-2)
-    }
-    </small>
+
+    <div>
+      <i class="far fa-heart text-white"></i>
+      <span class="duration pr-3 text-white-50">
+      ${
+        ("0" + Math.floor(song.duration / 60)).substr(-2) +
+        " : " +
+        ("0" + (song.duration % 60)).substr(-2)
+      }
+      </span>
+    </div>
   </div>
   `;
 };
@@ -53,14 +57,24 @@ window.onload = async () => {
   document.querySelector("#user-img").src = album.cover;
   document.querySelector("h5").innerText = album.label;
 
-  document.querySelector("ul.list-group");
-
   const tracks = album.tracks.data;
   tracks.forEach((song, index) => {
-    console.log(song);
-    const div = document.createElement('div')
+    // console.log(song);
+    const div = document.createElement("div");
     div.innerHTML += getTrackList(song);
-    // document.querySelector("#tracklist").innerHTML 
+    // document.querySelector("#tracklist").innerHTML
+    div.onclick = () => {
+      setPlayerSong({
+        album: {
+          cover: album.cover,
+          title: album.title,
+        },
+        id: song.id,
+        title: song.title,
+        duration: song.duration,
+        preview: song.preview,
+      });
+    };
+    document.querySelector("#tracklist").appendChild(div);
   });
-  console.log(document.querySelector("#tracklist"));
 };

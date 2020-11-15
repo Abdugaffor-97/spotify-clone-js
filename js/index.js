@@ -15,7 +15,7 @@ const headers = new Headers({
   "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
 });
 
-const search = (query = "metallica") => {
+const search = (query = "eminem") => {
   fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + query, {
     method: "GET",
     headers,
