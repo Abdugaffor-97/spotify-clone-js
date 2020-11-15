@@ -1,0 +1,169 @@
+body {
+  background-color: #121212;
+}
+
+/* Nav bar */
+nav {
+  left: 236px !important;
+  max-width: calc(100vw - 236px);
+}
+
+.on-scroll {
+  background-image: linear-gradient(to left, rgb(46, 55, 56), rgb(63, 57, 57));
+}
+
+nav.navbar div ul:last-child li {
+  height: 33px;
+  width: 135px;
+  background-color: #050505;
+  border-radius: 20px;
+}
+
+nav.navbar div ul:last-child li:first-child {
+  transition: all 0.01s ease-in-out;
+}
+
+nav.navbar div ul:last-child li:first-child:hover {
+  transform: scale(1.05);
+}
+
+nav.navbar div ul:last-child li:last-child a:hover {
+  background-color: #282828 !important;
+}
+
+.nav-link.dropdown-toggle:hover {
+  background-color: #333232;
+}
+
+nav .dropdown-menu {
+  background-color: #282828;
+}
+
+nav .dropdown-menu a {
+  color: #bfbfbf;
+}
+nav .dropdown-menu a:hover {
+  color: #fff;
+}
+
+a,
+a:hover {
+  color: #fff;
+}
+
+/*<<------------------------------ Left Side Navigation bar ------------------------------------->>>*/
+
+div.position-fixed div.container ul li {
+  list-style-type: none;
+  line-height: 40px;
+}
+
+div.position-fixed div.container li {
+  cursor: pointer;
+}
+
+div.position-fixed div.container a {
+  text-decoration: none;
+  color: rgb(175, 170, 170);
+}
+
+div.position-fixed div.container li:hover a {
+  color: #fff;
+}
+
+div.position-fixed div.container div:nth-child(3) div {
+  line-height: 40px;
+}
+
+div.position-fixed div.container div:last-child div a:hover {
+  text-decoration: none;
+}
+
+/* ----- Created playlist section -----*/
+div.position-fixed div.container div:nth-child(3) div:last-child {
+  margin: 5px;
+  padding: 5px;
+  height: 140px;
+  width: 195px;
+  overflow: auto;
+  text-align: justify;
+}
+
+/* ------------------MAIN ----------------------------- */
+main {
+  padding-left: 236px;
+  padding-bottom: 86px;
+}
+
+/* ------------------------FOOTER ------------------------------------------ */
+
+/* Player Bar */
+footer {
+  height: 85px;
+  background-color: #282828;
+  min-width: 600px;
+  color: white;
+}
+
+.playerArtistInfo > div {
+  overflow: hidden;
+}
+
+.progressContainer {
+  width: 600px;
+  color: white;
+}
+
+.progressContainer span {
+  opacity: 0.5;
+}
+.progress {
+  color: white;
+  background-color: #414141;
+  height: 6px;
+  margin: 0 1rem;
+}
+
+.playerVolume {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.playerVolume .fa {
+  opacity: 0.5;
+  color: white;
+  margin-right: 0.5rem;
+}
+.playerVolume input {
+  -webkit-appearance: none;
+  outline: none;
+  background: transparent;
+}
+.playerVolume input::-webkit-slider-runnable-track {
+  background-color: #414141;
+  height: 6px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.playerVolume input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0px;
+  box-shadow: -200px 0 0 200px #007bff;
+}
+
+footer div i {
+  transition: all 0.01s ease-in-out;
+}
+
+footer div i:hover {
+  transform: scale(1.3);
+}
+
+/* When the user  changed the page this style added li of that current page via JS*/
+.current-page {
+  background-color: #282828;
+  border-radius: 5px;
+}
+.current-page a {
+  color: white !important;
+}

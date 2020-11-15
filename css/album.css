@@ -1,0 +1,25 @@
+/* style='background: linear-gradient(#4F4F4F, #2A2A2A);' */
+main .jumbotron {
+  background: linear-gradient(#407e9c, #202020);
+}
+
+i {
+  transition: all 0.01s ease-in-out;
+}
+
+i:hover {
+  transform: scale(1.05);
+}
+
+button {
+  height: 35px;
+}
+
+.trackHover:hover {
+  background-color: #2A2A2A;
+  cursor: pointer;
+}
+
+.trackHover a {
+  text-decoration: none;
+}
